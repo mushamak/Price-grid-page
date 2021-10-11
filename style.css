@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+/* Body */
+body {
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+    --Cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background-color: var(--light-gray);
+}
+
+#component {
+    display: grid;
+    border-radius: 5px;
+    box-shadow: 1px 5px 18px rgb(165 197 217);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1.3fr;
+    grid-template-areas:
+        "w w"
+        "dg g";
+    max-width: 610px;
+    height: 470px;
+    overflow: hidden;
+}
+
+
+/* section one */
+#component section.join-our-community {
+    grid-area: w;
+    background-color: #fff;
+}
+
+#component h1.big-title {
+    color: var(--Cyan);
+    font-weight: 700;
+    padding: 2rem;
+    padding-bottom: 1rem;
+}
+
+#component p.lime-green {
+    color: var(--bright-yellow);
+    font-weight: bold;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+#component p.greyish-white {
+    padding-left: 2rem;
+    line-height: 1.8rem;
+    color: var(--grayish-blue);
+}
+/* section two */
+#component section.mounthly-subscription {
+    background-color: var(--Cyan);
+    grid-area: dg;
+}
+
+h2 {
+    color: #fff;
+    opacity: 80%;
+    padding: 2.5rem 0 1rem 2.5rem;
+    font-size: 18px;
+}
+
+#component div.flex {
+    padding: 0 0 0 2.5rem;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+span {
+    font-size: 16px;
+    font-weight: normal;
+    opacity: 50%;
+    padding-left: 0.5rem;
+    position: relative;
+    bottom: 6px;
+}
+
+#component section.mounthly-subscription p.pale-white {
+    color: #fff;
+    opacity: 80%;
+    padding: 0.5rem 2.5rem;
+    font-size: 15px;
+}
+
+button {
+    font-family: "Karla", sans-serif;
+    border: none;
+    cursor: pointer;
+    padding-left: 1rem;
+    width: 78%;
+    height: 19%;
+    position: relative;
+    left: 2rem;
+    top: 1.5rem;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--bright-yellow);
+    box-shadow: 1px 8px 13px rgb(6 149 149);
+}
+/* section three */
+
+#component section.why-us {
+    background-color: var(--Cyan);
+    opacity: 70%;
+    grid-area: g;
+}
+
+#component section.why-us p.pale-white {
+    color: #fff;
+    padding: 0.2rem 2rem 0 2.5rem;
+    font-size: 14px;
+    opacity: 70%;
+    font-weight: normal;
+}
+
+#component section.why-us h2 {
+    opacity: 100%;
+}
+
+@media screen and (max-width: 375px) {
+    #component {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "w"
+            "dg"
+            "g";
+        height: fit-content;
+        margin: auto 1.5rem;
+    }
+
+    #component section.join-our-community {
+        grid-area: w;
+        padding-bottom: 1rem;
+        padding-right: 1.5rem;
+    }
+    #component section.mounthly-subscription {
+        grid-area: dg;
+    }
+    #component section.why-us {
+        grid-area: g;
+    }
+}
+
+/* Footer */
+.attribution {
+    margin-top: 1rem;
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
